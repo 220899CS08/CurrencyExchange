@@ -1,0 +1,86 @@
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, const char * argv[]) {
+    
+    int number1(0);
+    int number2(0);
+    int number3(0);
+    int number4(0);
+    int number5(0);
+    float number6(0);
+    
+    cout << "For USD - 1" << endl;
+    cout << "For EURO - 2" << endl;
+    cout << "For GBP - 3" << endl;
+    
+    cout << "Enter currency code you want to change: ";
+    cin >> number1;
+    if (number1 > 3) {
+        cout << "Error" << endl;
+        exit(0);
+    }
+    
+    number3 = 11000;
+    number4 = 10500;
+    number5 = 12000;
+    
+    
+    switch (number1){
+        case 1:
+            cout << "USD - " << (number3) << " so'm"<< endl;
+            break;
+        case 2:
+            cout << "EURO - " << (number4) << " so'm" << endl;
+            break;
+        case 3:
+            cout << "GBP - " << (number5) << " so'm" <<endl;
+            break;
+            
+        default:
+            cout << "nothing" << endl;
+            break;
+    }
+   
+            cout << "Do you want to change: ";
+            cin >> number2;
+    
+    switch (number2) {
+        case 0:
+            break;
+        case 1:
+            break;
+            
+        default:
+            break;
+    }
+   
+    
+    if (number2 == 0) {
+        cout << "Program stopped" << endl;
+        
+    }
+    
+    
+    
+    if (number2 == 1) {
+        cout << "Enter amount of money: ";
+        cin >> number6;
+    }
+    
+    if (number1 == 1) {
+        cout << "Money is: " << number3 * number6 << endl;
+    }
+    
+    if (number1 == 2) {
+        cout << "Money is: " << number4 * number6 << endl;
+    }
+        
+    if (number1 == 3) {
+        cout << "Money is: " << number5 * number6 << endl;
+    }
+    cin.get();
+  
+    return 0;
+}
